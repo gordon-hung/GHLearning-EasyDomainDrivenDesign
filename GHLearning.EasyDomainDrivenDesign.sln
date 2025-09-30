@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36127.28
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11018.127 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -14,6 +14,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHLearning.EasyDomainDrivenDesign.SharedKernel", "src\GHLearning.EasyDomainDrivenDesign.SharedKernel\GHLearning.EasyDomainDrivenDesign.SharedKernel.csproj", "{B81646A8-D88A-4602-9B02-ED4FC6812753}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHLearning.EasyDomainDrivenDesign.WebApi", "src\GHLearning.EasyDomainDrivenDesign.WebApi\GHLearning.EasyDomainDrivenDesign.WebApi.csproj", "{518DB494-9DCC-397E-8620-04C45C730C06}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{777645A3-440C-4E7F-83E4-3989E9BE234A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHLearning.EasyDomainDrivenDesign.ApplicationTests", "tests\GHLearning.EasyDomainDrivenDesign.ApplicationTests\GHLearning.EasyDomainDrivenDesign.ApplicationTests.csproj", "{986D4526-B949-4D0E-A72F-7B87A073E8B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,10 @@ Global
 		{518DB494-9DCC-397E-8620-04C45C730C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{518DB494-9DCC-397E-8620-04C45C730C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{518DB494-9DCC-397E-8620-04C45C730C06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{986D4526-B949-4D0E-A72F-7B87A073E8B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{986D4526-B949-4D0E-A72F-7B87A073E8B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{986D4526-B949-4D0E-A72F-7B87A073E8B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{986D4526-B949-4D0E-A72F-7B87A073E8B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +59,7 @@ Global
 		{BC24D6A8-6918-4699-901D-5CD3E87DE37A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{B81646A8-D88A-4602-9B02-ED4FC6812753} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{518DB494-9DCC-397E-8620-04C45C730C06} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{986D4526-B949-4D0E-A72F-7B87A073E8B8} = {777645A3-440C-4E7F-83E4-3989E9BE234A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5FC255F3-D7AE-4707-9504-231F98935379}

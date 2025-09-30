@@ -1,8 +1,9 @@
 ﻿name: Code Coverage Report
 on:
   push:
-    branches:
-      - "*"
+    branches: [ "*" ]
+  pull_request:
+    branches: [ "master" ]
 
 jobs:
   codecov:

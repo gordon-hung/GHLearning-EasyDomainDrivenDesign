@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using GHLearning.EasyDomainDrivenDesign.Application.Announcement.Archived;
+﻿using GHLearning.EasyDomainDrivenDesign.Application.Announcement.Archived;
 using GHLearning.EasyDomainDrivenDesign.Application.Announcement.Deleted;
 using GHLearning.EasyDomainDrivenDesign.Application.Announcement.Draft;
 using GHLearning.EasyDomainDrivenDesign.Application.Announcement.Get;
