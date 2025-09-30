@@ -1,6 +1,5 @@
 ﻿using GHLearning.EasyDomainDrivenDesign.Domain.Announcement;
 using MediatR;
-using GHLearning.EasyDomainDrivenDesign.Application.Announcement.Log;
 
 namespace GHLearning.EasyDomainDrivenDesign.Application.Announcement.Log;
 

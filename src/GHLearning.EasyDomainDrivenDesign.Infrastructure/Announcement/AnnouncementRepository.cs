@@ -1,14 +1,8 @@
 ﻿using GHLearning.EasyDomainDrivenDesign.Domain.Announcement;
 using GHLearning.EasyDomainDrivenDesign.Domain.SeedWork;
 using GHLearning.EasyDomainDrivenDesign.Infrastructure.Announcement.Tables;
-using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GHLearning.EasyDomainDrivenDesign.Infrastructure.Announcement;
 

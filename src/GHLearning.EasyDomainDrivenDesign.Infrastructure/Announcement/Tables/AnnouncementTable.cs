@@ -1,5 +1,4 @@
-﻿using GHLearning.EasyDomainDrivenDesign.Domain.Announcement;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace GHLearning.EasyDomainDrivenDesign.Infrastructure.Announcement.Tables;
