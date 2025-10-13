@@ -1,6 +1,4 @@
-﻿using GHLearning.EasyDomainDrivenDesign.Domain.Announcement;
-
-namespace GHLearning.EasyDomainDrivenDesign.WebApi.Controllers.Announcement.ViewModels;
+﻿namespace GHLearning.EasyDomainDrivenDesign.WebApi.Controllers.Announcement.ViewModels;
 
 public record AnnouncementGetViewModel(
 	Guid Id,

@@ -4,12 +4,12 @@ using System.Text.Json.Serialization;
 using GHLearning.EasyDomainDrivenDesign.Application.Announcement.Draft;
 using GHLearning.EasyDomainDrivenDesign.WebApi.Controllers.Announcement.ViewModels;
 using MediatR;
-using NSubstitute;
 using Microsoft.Extensions.DependencyInjection;
+using NSubstitute;
 
-namespace GHLearning.EasyDomainDrivenDesign.InfrastructureTests.Announcement;
+namespace GHLearning.EasyDomainDrivenDesign.IntegrationTests.Announcement;
 
-public class UpdateAnnouncementTests
+public class CreateAnnouncementTests
 {
 	private static readonly JsonSerializerOptions _SerializerOptions = new()
 	{
@@ -21,23 +21,23 @@ public class UpdateAnnouncementTests
 	};
 
 	[Fact]
-	public async Task UpdateAnnouncement_ShouldReturnNoContent_WhenUpdateIsSuccessful()
+	public async Task CreateAnnouncement_ShouldReturnNoContent_WhenUpdateIsSuccessful()
 	{
-		var id = Guid.NewGuid();
-		var source = new AnnouncementUpdateViewModel(
-			Title: "Updated Title",
-			Content: "Updated Content",
+		var source = new AnnouncementCreateViewModel(
+			Title: "Title",
+			Content: "Content",
 			PublishAt: DateTimeOffset.UtcNow,
-			ExpireAt: DateTimeOffset.UtcNow.AddHours(2),
-			IsDraft: true);
+			ExpireAt: DateTimeOffset.UtcNow.AddHours(1),
+			IsDraft: false);
 
+		var id = Guid.NewGuid();
 		var web = new WebApiApplicationTests(builder =>
 		{
 			var fakeIMediator = Substitute.For<IMediator>();
 
 			_ = fakeIMediator.Send(
-				request: Arg.Is<DraftAnnouncementCommand>(compare =>
-					compare.Id == id &&
+				request: Arg.Is<DraftAnnouncementCommand>(predicate: compare =>
+					compare.Id == Guid.Empty &&
 					compare.Title == source.Title &&
 					compare.Content == source.Content &&
 					compare.PublishAt == source.PublishAt &&
@@ -51,11 +51,12 @@ public class UpdateAnnouncementTests
 
 		var httpClient = web.CreateDefaultClient();
 
-		var jsonContent = JsonContent.Create(source, options: _SerializerOptions);
-		var httpResponseMessage = await httpClient.PutAsync(
-			$"/api/Announcement/{id}",
+		var jsonContent = JsonContent.Create(source);
+		var response = await httpClient.PostAsync(
+			"/api/Announcement",
 			jsonContent);
 
-		Assert.Equal(System.Net.HttpStatusCode.NoContent, httpResponseMessage.StatusCode);
+		var actual = JsonSerializer.Deserialize<Guid>(json: await response.Content.ReadAsStringAsync(), options: _SerializerOptions);
+		Assert.Equal(id, actual);
 	}
 }

@@ -20,6 +20,7 @@ internal class AnnouncementDomainEventDispatcher(
 						cancellationToken: cancellationToken)
 						.ConfigureAwait(false);
 					break;
+
 				case AnnouncementLogDomainEvent e:
 					await publish.Publish(new AnnouncementLogDomainEvent(
 						id: e.Id,

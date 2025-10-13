@@ -2,5 +2,5 @@
 
 public interface IRepository : IAggregateRoot
 {
-    IUnitOfWork UnitOfWork { get; }
+	IUnitOfWork UnitOfWork { get; }
 }

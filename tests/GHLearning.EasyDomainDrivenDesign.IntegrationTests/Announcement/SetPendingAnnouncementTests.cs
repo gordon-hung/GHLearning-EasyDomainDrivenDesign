@@ -2,10 +2,10 @@
 using GHLearning.EasyDomainDrivenDesign.Application.Announcement.Pending;
 using GHLearning.EasyDomainDrivenDesign.WebApi.Controllers.Announcement.ViewModels;
 using MediatR;
-using NSubstitute;
 using Microsoft.Extensions.DependencyInjection;
+using NSubstitute;
 
-namespace GHLearning.EasyDomainDrivenDesign.InfrastructureTests.Announcement;
+namespace GHLearning.EasyDomainDrivenDesign.IntegrationTests.Announcement;
 
 public class SetPendingAnnouncementTests
 {

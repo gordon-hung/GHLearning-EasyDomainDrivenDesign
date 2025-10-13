@@ -32,7 +32,7 @@ public abstract class Enumeration(int id, string name) : IComparable
 	}
 
 	// 若需要客製化 Equals 再討論
-	public sealed override bool Equals(object? obj)
+	public override sealed bool Equals(object? obj)
 	{
 		if (obj == null)
 		{
@@ -50,7 +50,7 @@ public abstract class Enumeration(int id, string name) : IComparable
 		return typeMatches && idMatches;
 	}
 
-	public sealed override int GetHashCode()
+	public override sealed int GetHashCode()
 	{
 		return Id.GetHashCode();
 	}

@@ -4,12 +4,9 @@ using GHLearning.EasyDomainDrivenDesign.Application.Announcement.Draft;
 using GHLearning.EasyDomainDrivenDesign.Application.Announcement.Get;
 using GHLearning.EasyDomainDrivenDesign.Application.Announcement.Pending;
 using GHLearning.EasyDomainDrivenDesign.Application.Announcement.Published;
-using GHLearning.EasyDomainDrivenDesign.Domain.Announcement;
 using GHLearning.EasyDomainDrivenDesign.WebApi.Controllers.Announcement.ViewModels;
 using MediatR;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using OpenTelemetry.Trace;
 
 namespace GHLearning.EasyDomainDrivenDesign.WebApi.Controllers.Announcement;
 
@@ -17,7 +14,6 @@ namespace GHLearning.EasyDomainDrivenDesign.WebApi.Controllers.Announcement;
 [ApiController]
 public class AnnouncementController(IMediator mediator) : ControllerBase
 {
-
 	// 取得單一公告
 	[HttpGet("{id:guid}")]
 	public async Task<ActionResult<AnnouncementGetViewModel>> GetAsync(Guid id, CancellationToken cancellationToken)

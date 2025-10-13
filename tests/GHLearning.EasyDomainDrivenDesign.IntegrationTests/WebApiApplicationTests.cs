@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using OpenTelemetry.Exporter;
 
-namespace GHLearning.EasyDomainDrivenDesign.InfrastructureTests;
+namespace GHLearning.EasyDomainDrivenDesign.IntegrationTests;
 
 internal class WebApiApplicationTests(Action<IWebHostBuilder>? webHostConfigure = null) : WebApplicationFactory<Program>
 {

@@ -2,5 +2,5 @@
 
 public interface IDomainEvent
 {
-    DateTimeOffset PublishAt { get; }
+	DateTimeOffset PublishAt { get; }
 }

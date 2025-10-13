@@ -1,6 +1,4 @@
 ﻿using System.Net;
-using System.Net.Http;
-using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using GHLearning.EasyDomainDrivenDesign.Application.Announcement.Get;
@@ -10,7 +8,7 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using NSubstitute;
 
-namespace GHLearning.EasyDomainDrivenDesign.InfrastructureTests.Announcement;
+namespace GHLearning.EasyDomainDrivenDesign.IntegrationTests.Announcement;
 
 public class GetAnnouncementTests
 {

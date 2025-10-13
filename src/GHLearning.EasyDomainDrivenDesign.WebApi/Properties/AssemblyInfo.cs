@@ -1,3 +1,3 @@
 ﻿using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("GHLearning.EasyDomainDrivenDesign.InfrastructureTests")]
+[assembly: InternalsVisibleTo("GHLearning.EasyDomainDrivenDesign.IntegrationTests")]
