@@ -1,7 +1,7 @@
-using MediatR;
+﻿using MediatR;
 
 namespace GHLearning.EasyDomainDrivenDesign.Application.Announcement.Archived;
 
 public record ArchivedAnnouncementCommand(
-    Guid Id
+	Guid Id
 ) : IRequest;

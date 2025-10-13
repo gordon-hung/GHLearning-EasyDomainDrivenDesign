@@ -1,7 +1,7 @@
-using MediatR;
+﻿using MediatR;
 
 namespace GHLearning.EasyDomainDrivenDesign.Application.Announcement.Deleted;
 
 public record DeletedAnnouncementCommand(
-    Guid Id
+	Guid Id
 ) : IRequest;

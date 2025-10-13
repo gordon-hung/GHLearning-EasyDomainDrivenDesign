@@ -1,8 +1,12 @@
 ﻿namespace GHLearning.EasyDomainDrivenDesign.WebApi.Controllers.Announcement.ViewModels;
 
-public record AnnouncementUpdateViewModel(
+public record AnnouncementGetViewModel(
+	Guid Id,
 	string Title,
 	string Content,
+	int Status,
+	string StatusName,
 	DateTimeOffset PublishAt,
 	DateTimeOffset? ExpireAt,
-	bool IsDraft);
+	DateTimeOffset CreatedAt,
+	DateTimeOffset UpdatedAt);

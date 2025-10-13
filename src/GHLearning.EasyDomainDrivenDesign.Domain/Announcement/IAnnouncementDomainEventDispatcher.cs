@@ -2,4 +2,4 @@
 
 namespace GHLearning.EasyDomainDrivenDesign.Domain.Announcement;
 
-public interface IAnnouncementDomainEventDispatcher: IDomainEventDispatcher;
+public interface IAnnouncementDomainEventDispatcher : IDomainEventDispatcher;

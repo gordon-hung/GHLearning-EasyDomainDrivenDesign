@@ -10,7 +10,6 @@ public class AnnouncementLogEntity : Entity, IAggregateRoot
 
 	public DateTimeOffset LogdAt { get; private set; }
 
-
 	public AnnouncementLogEntity(Guid id, Guid announcementId, AnnouncementStatus status, DateTimeOffset logdAt)
 	{
 		Id = id;

@@ -1,11 +1,16 @@
-﻿using CorrelationId;
-using GHLearning.EasyDomainDrivenDesign.SharedKernel;
-using GHLearning.EasyDomainDrivenDesign.Infrastructure;
+﻿using System.Net.Mime;
+using System.Text.Json.Serialization;
+using CorrelationId;
 using GHLearning.EasyDomainDrivenDesign.Application;
+using GHLearning.EasyDomainDrivenDesign.Infrastructure;
+using GHLearning.EasyDomainDrivenDesign.SharedKernel;
+using GHLearning.EasyDomainDrivenDesign.WebApi.MessageConsumers;
+using GHLearning.EasyDomainDrivenDesign.WebApi.Middlewares;
 using MassTransit;
 using MassTransit.Logging;
 using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using MongoDB.Driver;
@@ -16,13 +21,8 @@ using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using Scalar.AspNetCore;
 using StackExchange.Redis;
-using System.Net.Mime;
-using System.Text.Json.Serialization;
 using ZiggyCreatures.Caching.Fusion;
 using ZiggyCreatures.Caching.Fusion.Backplane.StackExchangeRedis;
-using Microsoft.EntityFrameworkCore;
-using GHLearning.EasyDomainDrivenDesign.WebApi.MessageConsumers;
-using GHLearning.EasyDomainDrivenDesign.WebApi.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
